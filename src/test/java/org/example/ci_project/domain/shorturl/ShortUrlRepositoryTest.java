@@ -21,11 +21,11 @@ class ShortUrlRepositoryTest {
     @DisplayName("코드로 URL 정보를 조회한다")
     void find_by_code() {
         // Given
-        ShortUrl sample = new ShortUrl("2D8EUd", "/original-path");
+        ShortUrl sample = new ShortUrl("YY7Oo9", "/original-path");
         shortUrlRepository.save(sample);
 
         // When
-        ShortUrl found = shortUrlRepository.findById("2D8EUd").orElseThrow();
+        ShortUrl found = shortUrlRepository.findById("YY7Oo9").orElseThrow();
 
         // Then
         assertThat(found.getUrl()).isEqualTo("/original-path");
