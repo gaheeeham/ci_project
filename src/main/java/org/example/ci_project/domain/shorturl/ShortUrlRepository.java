@@ -8,5 +8,5 @@ public interface ShortUrlRepository extends JpaRepository<ShortUrl, String> {
     // 1. WHERE code = ? (기본 findById로 해결 가능)
 
     // 2. WHERE url = ? LIMIT 1
-    Optional<ShortUrl> findFirstByUrl(String url);
+    Optional<ShortUrl> findByUrl(String url);
 }
