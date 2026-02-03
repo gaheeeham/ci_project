@@ -39,7 +39,7 @@ class ShortUrlRepositoryTest {
         shortUrlRepository.save(new ShortUrl("ABC123", targetUrl));
 
         // When
-        ShortUrl found = shortUrlRepository.findFirstByUrlOrderByCrtDtDesc2(targetUrl).orElseThrow();
+        ShortUrl found = shortUrlRepository.findFirstByUrlOrderByCrtDtDesc(targetUrl).orElseThrow();
 
         // Then
         assertThat(found.getCode()).isEqualTo("ABC123");
