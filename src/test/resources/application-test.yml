@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    # URL 끝에 INIT 설정을 추가하여 시작하자마자 스키마를 만들게 합니다.
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;INIT=CREATE SCHEMA IF NOT EXISTS cms180
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # 하이버네이트가 테이블을 생성할 때 기본적으로 cms180 스키마를 쓰도록 강제합니다.
+        default_schema: cms180

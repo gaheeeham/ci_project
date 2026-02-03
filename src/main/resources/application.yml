@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ci-project
+
+  datasource:
+    url: jdbc:postgresql://175.118.126.50:9432/seoulMap
+    username: postgres
+    password: mango12#$56
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
