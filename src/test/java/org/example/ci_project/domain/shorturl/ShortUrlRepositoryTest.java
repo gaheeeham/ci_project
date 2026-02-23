@@ -32,7 +32,7 @@ class ShortUrlRepositoryTest {
     }
 
     @Test
-    @DisplayName("긴 URL로 단축 정보 하나를 조회한다 (LIMIT 1)")
+    @DisplayName("긴 URL로 단축 정보 하나를 조회한다")
     void find_by_url() {
         // Given
         String targetUrl = "/conts-copy?conts_info=20251105,4,20251105,4,ko,erter345324";
